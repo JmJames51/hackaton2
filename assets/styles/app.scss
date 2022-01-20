@@ -41,6 +41,7 @@ body {
     font-size: 3rem;
     padding: 1rem;
 }
+
 .question-container {
     background-color: blanchedalmond;
     display: flex;
@@ -57,7 +58,19 @@ body {
 
 .question-container h1 {
     margin-bottom: 1rem;
+    font-size: 3rem;
 }
+
+.question-container h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.list {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+}
+
 // modal end
 // Start Tool Genius
 
