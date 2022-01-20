@@ -23,4 +23,20 @@ class HomeController extends AbstractController
     {
         return $this->render('home/sofa.html.twig');
     }
+
+    /**
+     * @Route("/sofa", name="sofa")
+     */
+    public function sofa1(): Response
+    {
+        return $this->render('home/sofa1.html.twig');
+    }
+
+     /**
+     * @Route("/sofa", name="sofa")
+     */
+    public function sofa2(): Response
+    {
+        return $this->render('home/sofa2.html.twig');
+    }
 }
