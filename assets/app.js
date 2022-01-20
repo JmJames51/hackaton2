@@ -81,20 +81,32 @@ let qaArray = [
             "Ajouter manuellement une gamme de prix ( Entre 250 et 500 € )",
             "Non",
         ]
-    }
+    },
 ]
 
 let questionContainer = document.getElementById('question')
 let buttons = document.getElementsByClassName('choiRep')
+let product = document.getElementById('product-container')
+let buttonRep = document.getElementById('buttonRep')
+product.style.display = 'none'
 
 questionContainer.innerHTML = qaArray[0].question
 let arrayPos = 0
 
+for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function () {
+            arrayPos++
+            refreshQuestion()
+        })
+}
+
 function refreshQuestion() {
+    console.log(arrayPos)
     if (qaArray[arrayPos] === undefined) {
-        console.log('fini')
-
-
+        console.log(product)
+        buttonRep.style.display = 'none'
+        product.style.display = 'block'
+        questionContainer.innerHTML = "Jai trouvé ça pour toi poto :"
     } else {
         questionContainer.innerHTML = qaArray[arrayPos].question
         console.log(qaArray[arrayPos].rep)
@@ -103,11 +115,6 @@ function refreshQuestion() {
                 console.log(qaArray[arrayPos].rep[i])
                 buttons[i].innerHTML = qaArray[arrayPos].rep[i]
                 buttons[i].style.display = 'block'
-                buttons[i].addEventListener('click', function () {
-                    arrayPos++
-                    refreshQuestion()
-                })
-
             } else {
 
                 buttons[i].style.display = 'none'
@@ -119,10 +126,3 @@ function refreshQuestion() {
 }
 
 refreshQuestion()
-
-// for (let i = 0; i < buttons.length; i++) {
-//     buttons[i].addEventListener('click', function() {
-//         questionContainer.innerHTML = question[i]
-//     })
-// }
-
