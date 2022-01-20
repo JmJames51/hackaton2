@@ -5,6 +5,7 @@ body {
     height: 100vh;
 }
 
+// modal home
 #button {
     position: fixed;
     bottom: 2rem;
@@ -14,7 +15,7 @@ body {
 }
 
 #modalHolder {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
@@ -25,15 +26,52 @@ body {
     align-items: center;
 }
 .modalContainer {
-    background-color: rgb(0, 255, 221);
-    width: fit-content;
+    background-image: linear-gradient(to right, #7492c4 0%, #92b8ca 51%, #a1c4fd 100%);
+    width: 80%;
+    height: 80%;
+    z-index: 0;
 }
 
 #closeModalButton {
     position: relative;
     top: 0;
     right: 0;
+    margin-left: 45.3rem;
+    margin-bottom: 5rem;
+    font-size: 3rem;
+    padding: 1rem;
 }
+
+.question-container {
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border: 6px solid #3C5474;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-sizing: border-box;
+}
+
+.question-container h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.question-container h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.list {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+}
+
+// modal end
 // Start Tool Genius
 
 .character {
@@ -51,7 +89,7 @@ body {
     width: 6.4375em;
     height: 8.3125em;
     background: linear-gradient($wax-flower calc(100% - 6.125em), transparent 0);
-
+    
     // hair
     &::before,
     &::after {
@@ -247,10 +285,10 @@ body {
 }
 // End Tool Genius
 
-// index img
+// page home
 
 .page-home {
     width:100%;
 }
 
-// index end
+// home end
