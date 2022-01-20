@@ -85,7 +85,7 @@ let qaArray = [
 ]
 
 let questionContainer = document.getElementById('question')
-let buttons = document.getElementsByClassName('choiRep')
+let buttons = document.getElementsByClassName('choixRep')
 let product = document.getElementById('product-container')
 let buttonRep = document.getElementById('buttonRep')
 product.style.display = 'none'
