@@ -25,15 +25,15 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/sofa", name="sofa")
+     * @Route("/sofa1", name="sofa1")
      */
     public function sofa1(): Response
     {
         return $this->render('home/sofa1.html.twig');
     }
 
-     /**
-     * @Route("/sofa", name="sofa")
+    /**
+     * @Route("/sofa2", name="sofa2")
      */
     public function sofa2(): Response
     {
