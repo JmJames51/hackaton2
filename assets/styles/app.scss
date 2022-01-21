@@ -54,16 +54,21 @@ body {
     padding: 1rem;
     border-radius: 1rem;
     box-sizing: border-box;
+    box-shadow: rgb(0 0 0 / 19%) 0px 10px 20px, rgb(0 0 0 / 23%) 0px 6px 6px;
 }
 
 .question-container h1 {
     margin-bottom: 1rem;
-    font-size: 3rem;
+    font-size: 3.4rem;
+    font-family: fangsong;
+    font-weight: bold;
 }
 
 .question-container h2 {
-    font-size: 2rem;
+    font-size: 2.7rem;
     text-align: center;
+    font-family: fangsong;
+    font-weight: bold;
 }
 
 .list {
@@ -81,8 +86,9 @@ body {
     border-radius: 1rem;
     border: solid thin;
     background-color: transparent;
-    font-size: 2rem;
+    font-size: 2.3rem;
     margin-bottom: 2rem;
+    border: 4px solid #3C5474;
 }
 // end answer
 // start modal product
@@ -99,6 +105,7 @@ body {
     border: solid thin;
     margin-bottom: 2rem;
     border-radius: 2rem;
+    border: 4px solid #3C5474;
 }
 // end modal product
 // Start Tool Genius
