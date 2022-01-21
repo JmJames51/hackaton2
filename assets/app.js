@@ -13,78 +13,115 @@ import './bootstrap';
 console.log('test')
 
 let qaArray = [
-   {
-    question: "Je m'appelle Genius-Tools ! Que recherchez-vous ?", 
-    rep : [
-        "Outils", 
-        "Meubles",
-        "Matériaux", 
-
-    ] 
+    {
+        question: "Je m'appelle Genius-Tools ! Que recherchez-vous ?",
+        rep: [
+            "Outils",
+            "Meubles",
+            "Matériaux",
+            "Accessoires",
+            "Quincaillerie",
+        ]
     },
     {
-        question: "Quel type de meubles recherchez-vous ?", 
-        rep : [
-            "Outils", 
-            "Meubles",
-            "Matériaux", 
-            "Accessoires", 
-            "Quincaillerie",
-    
-        ] 
-        },
-        {
-            question: "Quel type de femme aimez vous ?", 
-            rep : [
-                "ne ", 
-                "yeyey",
-                "Matérjdjdjdjiaux", 
-                "yayayaya", 
-                "les moches",
-        
-            ] 
-        }
+        question: "Quel type de meubles recherchez-vous ?",
+        rep: [
+            "Intérieur",
+            "Exterieur",
+        ]
+    },
+    {
+        question: "Quel sera l'utilité de votre meuble ?",
+        rep: [
+            "Stockage",
+            "Support",
+            "Repos",
+            "Décoratif",
+            "Pour un animal",
+            "Salle de bain",
+        ]
+    },
+    {
+        question: "Quel sera l'utilité de votre meuble ?",
+        rep: [
+            "Stockage",
+            "Support",
+            "Repos",
+            "Décoratif",
+            "Pour un animal",
+            "Salle de bain",
+        ]
+    },
+    {
+        question: "Est-ce l'une de ces propositions ?",
+        rep: [
+            "Lit",
+            "Canapé",
+            "Fauteuil",
+            "Autres",
+        ]
+    },
+    {
+        question: "Quel type de canapé voulez-vous ?",
+        rep: [
+            "Canapé convertible",
+            "Canapé d'angle",
+            "Canapé panoramique",
+            "Canapé modulable",
+            "Autres",
+        ]
+    },
+    {
+        question: "Voulez-vous appliquer des filtres à votre recherche ?",
+        rep: [
+            "Les plus populaires",
+            "Les moins cher",
+            "Les plus cher",
+            "Mieux notés",
+            "Non",
+        ]
+    },
 ]
 
 let questionContainer = document.getElementById('question')
-let buttons = document.getElementsByClassName('choiRep') 
+let buttons = document.getElementsByClassName('choixRep')
+let product = document.getElementById('product-container')
+let buttonRep = document.getElementById('buttonRep')
+product.style.display = 'none'
 
 questionContainer.innerHTML = qaArray[0].question
 let arrayPos = 0
 
+for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function () {
+            arrayPos++
+            refreshQuestion()
+        })
+}
+
 function refreshQuestion() {
+    console.log(arrayPos)
     if (qaArray[arrayPos] === undefined) {
-        console.log('fini')
-
-
+        console.log(product)
+        buttonRep.style.display = 'none'
+        product.style.display = 'flex'
+        questionContainer.innerHTML = "Jai trouvé ça pour toi poto :"
     } else {
         questionContainer.innerHTML = qaArray[arrayPos].question
         console.log(qaArray[arrayPos].rep)
-        for ( let i = 0; i < buttons.length; i++) {
+        for (let i = 0; i < buttons.length; i++) {
             if (qaArray[arrayPos].rep[i] !== undefined) {
                 console.log(qaArray[arrayPos].rep[i])
                 buttons[i].innerHTML = qaArray[arrayPos].rep[i]
                 buttons[i].style.display = 'block'
-                buttons[i].addEventListener('click', function() {
-                            arrayPos++
-                            refreshQuestion()
-                        })
-        
             } else {
-        
+
                 buttons[i].style.display = 'none'
             }
-        
+
         }
     }
-    
+
 }
 
 refreshQuestion()
-
-// for (let i = 0; i < buttons.length; i++) {
-//     buttons[i].addEventListener('click', function() {
-//         questionContainer.innerHTML = question[i]
-//     })
-// }
-

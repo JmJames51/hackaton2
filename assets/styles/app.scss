@@ -72,7 +72,38 @@ body {
 }
 
 // modal end
+// start answer
+#question {
+    margin-bottom: 2rem;
+}
+
+.choixRep{
+    border-radius: 1rem;
+    border: solid thin;
+    background-color: transparent;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+// end answer
+// start modal product
+#product-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.product{
+    color: black;
+    text-decoration: none;
+    font-size: 2rem;
+}
+// end modal product
 // Start Tool Genius
+
+.modalChar{
+    right: -16rem;
+    top: 0rem;
+}
 
 .character {
     font-size: 25px;
