@@ -105,7 +105,7 @@ function refreshQuestion() {
         console.log(product)
         buttonRep.style.display = 'none'
         product.style.display = 'flex'
-        questionContainer.innerHTML = "Jai trouvé ça pour toi poto :"
+        questionContainer.innerHTML = "Voici les propositions que nous pouvons vous faire :"
     } else {
         questionContainer.innerHTML = qaArray[arrayPos].question
         console.log(qaArray[arrayPos].rep)
