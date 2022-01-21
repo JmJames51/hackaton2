@@ -78,7 +78,6 @@ let qaArray = [
             "Les moins cher",
             "Les plus cher",
             "Mieux notés",
-            "Ajouter manuellement une gamme de prix ( Entre 250 et 500 € )",
             "Non",
         ]
     },
@@ -105,7 +104,7 @@ function refreshQuestion() {
     if (qaArray[arrayPos] === undefined) {
         console.log(product)
         buttonRep.style.display = 'none'
-        product.style.display = 'block'
+        product.style.display = 'flex'
         questionContainer.innerHTML = "Jai trouvé ça pour toi poto :"
     } else {
         questionContainer.innerHTML = qaArray[arrayPos].question
